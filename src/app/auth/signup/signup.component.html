@@ -1,8 +1,8 @@
-<title>Contact</title>
+<title>signup</title>
 
 <mat-card class="outercard">
     <mat-card-title>
-        Register / Signin
+        Register / Signup
       </mat-card-title>
   <mat-card class="innercard">
         <form (ngSubmit)="onSignup(SignupForm)" #SignupForm="ngForm">
@@ -32,7 +32,7 @@
                         ngModel
                         placeholder="Email ID"
                         #emailId= "ngModel" required email>
-                <mat-error *ngIf="emailId.invalid">Please Enter a valid email!</mat-error>
+                <mat-error *ngIf="emailId.invalid">PLease Enter a valid email!</mat-error>
             </mat-form-field> <br>
             <mat-form-field>
                 <input type="password"

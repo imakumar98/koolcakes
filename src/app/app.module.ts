@@ -86,6 +86,8 @@ import { GolfcakesComponent } from './sportscakes/golf/golf.component';
 import { JerseyshapedcakesComponent } from './sportscakes/Jersey_shaped/jerseyshaped.component';
 import { OthersportsandgamescakesComponent } from './sportscakes/Other_Sports_and_games/othersportsandgames.component';
 import { TenniscakesComponent } from './sportscakes/tennis/tennis.component';
+import { ProductService } from './cart/services/product.service';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -161,7 +163,8 @@ import { TenniscakesComponent } from './sportscakes/tennis/tennis.component';
     OffersregComponent,
     NewsregComponent,
     CakescategoryregComponent,
-    CakesregComponent
+    CakesregComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -182,7 +185,7 @@ import { TenniscakesComponent } from './sportscakes/tennis/tennis.component';
     //   AngularFirestoreModule,
     //   AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

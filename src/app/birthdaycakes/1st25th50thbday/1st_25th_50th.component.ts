@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -6,8 +6,13 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./1st_25th_50th.component.css']
 })
 
-export class Birthday1st25th50thComponent {
+export class Birthday1st25th50thComponent implements OnInit {
 
+  ngOnInit() {}
+  constructor() {}
 
+  AddtoCart() {
+
+  }
 
 }

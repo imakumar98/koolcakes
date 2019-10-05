@@ -66,6 +66,7 @@ import { JerseyshapedcakesComponent } from './sportscakes/Jersey_shaped/jerseysh
 import { OthersportsandgamescakesComponent } from './sportscakes/Other_Sports_and_games/othersportsandgames.component';
 import { TenniscakesComponent } from './sportscakes/tennis/tennis.component';
 import { Formula1cakesComponent } from './sportscakes/formula_1/formula1.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const routes: Routes = [
@@ -140,7 +141,8 @@ const routes: Routes = [
   {path: 'specialcakes/christmas', component: ChristmascakesComponent},
   {path: 'specialcakes/baptism', component: BaptismcakesComponent},
   {path: 'specialcakes/gender_reveal', component: GenderrevcakesComponent},
-  {path: 'specialcakes/graduation', component: GraduationcakesComponent}
+  {path: 'specialcakes/graduation', component: GraduationcakesComponent},
+  {path: 'cart', component:  CartComponent}
 
 ];
 
