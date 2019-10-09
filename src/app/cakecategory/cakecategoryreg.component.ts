@@ -28,7 +28,7 @@ export class CakescategoryregComponent implements OnInit {
         cakecatdata.append('Name', form.value.name );
         cakecatdata.append('Price', form.value.price );
         cakecatdata.append('image', this.selectedFile, this.selectedFile.name);
-        this.http.post('http://localhost:3000/api/user//cakesregister', cakecatdata).subscribe(() => {
+        this.http.post('http://localhost:3000/api/user/cakesregister', cakecatdata).subscribe(() => {
             // console.log('news runing');
           }, error => {
             console.log(error);

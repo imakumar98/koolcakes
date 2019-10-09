@@ -7,12 +7,15 @@ import { NgForm } from '@angular/forms';
 })
 
 export class Birthday1st25th50thComponent implements OnInit {
+  data: any[];
 
-  ngOnInit() {}
   constructor() {}
 
-  AddtoCart() {
 
+  ngOnInit() {}
+
+  AddtoCart(data) {
+    console.log(data);
   }
 
 }

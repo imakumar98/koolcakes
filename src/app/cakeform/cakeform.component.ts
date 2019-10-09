@@ -26,16 +26,16 @@ export class CakeformComponent implements OnInit {
   processForm(form: NgForm) {
     if (form.valid) {
         const data: CakeformData = {
-            size: form.value.size,
-            spongetype: form.value.sponge,
-            cream: form.value.cream,
-            egg_or_eggless: form.value.egg,
-            cake_filler: form.value.cakefiller,
-            message: form.value.message,
-            message_color: form.value.messagecolor,
-            first_name: form.value.fullname,
-            email_ID: form.value.email,
-            mobile_number: form.value.mno
+          size: form.value.size,
+          spongetype: form.value.sponge,
+          cream: form.value.cream,
+          egg_or_eggless: form.value.egg,
+          cake_filler: form.value.cakefiller,
+          message: form.value.message,
+          message_color: form.value.messagecolor,
+          first_name: form.value.fullname,
+          email_ID: form.value.email,
+          mobile_number: form.value.mno
         };
         // this.firebaseService.addmessage(data).then(res => {
         //     form.reset();

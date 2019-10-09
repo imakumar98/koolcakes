@@ -9,6 +9,7 @@ import { SignupData } from './signup/signup.model';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
+  public loggedIn;
   private isAuthenticated = false;
   private token: string;
   private tokenTimer: any;
@@ -43,6 +44,7 @@ export class AuthService {
     this.http
       .post('http://localhost:3000/api/user/register', payload)
       .subscribe(() => {
+        this.loggedIn = true;
         this.router.navigate(['/']);
       }, error => {
         this.authStatusListener.next(false);
@@ -70,7 +72,8 @@ export class AuthService {
           const expirationDate = new Date(
             now.getTime() + expiresInDuration * 1000
           );
-          console.log(expirationDate);
+          // console.log(expirationDate);
+          this.loggedIn = true;
           this.saveAuthData(token, expirationDate);
           this.router.navigate(['/']);
         }
@@ -102,11 +105,12 @@ export class AuthService {
     this.userId = null;
     clearTimeout(this.tokenTimer);
     this.clearAuthData();
+    this.loggedIn = false;
     this.router.navigate(['/']);
   }
 
   private setAuthTimer(duration: number) {
-    console.log('Setting timer: ' + duration);
+    // console.log('Setting timer: ' + duration);
     this.tokenTimer = setTimeout(() => {
       this.logout();
     }, duration * 1000);

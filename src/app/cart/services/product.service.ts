@@ -8,11 +8,11 @@ export class ProductService {
     private products: Product[];
 
     constructor() {
-        // this.products = [
-        //     { id: 'p01', name: 'name 1', price: 100, photo: 'thumb1.gif' },
-        //     { id: 'p02', name: 'name 2', price: 200, photo: 'thumb2.gif' },
-        //     { id: 'p03', name: 'name 3', price: 300, photo: 'thumb3.gif' }
-        // ];
+        this.products = [
+            { id: 'p01', name: 'name 1', price: 100, photo: 'pic1.gif' },
+            { id: 'p02', name: 'name 2', price: 200, photo: 'p2.gif' },
+            { id: 'p03', name: 'name 3', price: 300, photo: 'p3.gif' }
+        ];
     }
 
     findAll(): Product[] {

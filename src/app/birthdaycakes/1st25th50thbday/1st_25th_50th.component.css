@@ -32,4 +32,6 @@ margin: auto;
     color: black;
 
 }
-
+.hidden{
+    visibility: hidden;
+}

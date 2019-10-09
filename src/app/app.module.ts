@@ -86,8 +86,17 @@ import { GolfcakesComponent } from './sportscakes/golf/golf.component';
 import { JerseyshapedcakesComponent } from './sportscakes/Jersey_shaped/jerseyshaped.component';
 import { OthersportsandgamescakesComponent } from './sportscakes/Other_Sports_and_games/othersportsandgames.component';
 import { TenniscakesComponent } from './sportscakes/tennis/tennis.component';
-import { ProductService } from './cart/services/product.service';
+
+
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AngularFireAuthModule} from 'angularfire2/auth';
+import { environment } from 'src/environments/environment';
 import { CartComponent } from './cart/cart.component';
+
+// import { ProductService } from './cart/services/product.service';
+// import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -164,15 +173,15 @@ import { CartComponent } from './cart/cart.component';
     NewsregComponent,
     CakescategoryregComponent,
     CakesregComponent,
-    CartComponent
+     CartComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
@@ -180,12 +189,12 @@ import { CartComponent } from './cart/cart.component';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    // AngularFireModule.initializeApp(environment.firebase),
-    //   AngularFireAuthModule,
-    //   AngularFirestoreModule,
-    //   AngularFireDatabaseModule
+    AngularFireModule.initializeApp(environment.firebase),
+      AngularFireAuthModule,
+      AngularFirestoreModule,
+      AngularFireDatabaseModule
   ],
-  providers: [ProductService],
+  // providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

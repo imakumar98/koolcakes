@@ -6,8 +6,12 @@
             <a routerLink="/cakeform"><img class="card-img-top" src="../../assets/p7.png" alt="Superheroes"></a>
             <div class="card-body">
             </div>
-            <div class="card-footer">
-                <strong>SUPERHEROS <a routerLink='/cart'><button mat-raised-button>Add to Cart</button></a></strong> 
+            <div class="card-footer" #data>
+                <span class="hidden">
+                    superhero
+                </span>
+                <span class="price">250$</span>
+               <strong>SUPERHEROS <a (click)='AddtoCart(data)'><button mat-raised-button>Add to Cart</button></a></strong> 
             </div>
         </div>
         <div class="card">

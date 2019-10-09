@@ -11,8 +11,9 @@
       <a routerLink="#" class="num"> Partner With Us</a>
       <a routerLink="#" class="num"> Track Order</a>
       <a routerLink="#" class="num"> Help</a>
-      <a class="reg" routerLink="/login">Login / </a>
-      <a class="reg" routerLink="/register">Signup</a> <br> <br>
+      <a class="reg" routerLink="/login" *ngIf="!(loggedIn)">Login / </a>
+      <a class="reg" routerLink="/register" *ngIf="!(loggedIn)">Signup</a>
+      <a class="reg" (onclick)="onLogout();" *ngIf="loggedIn">Logout</a> <br> <br>
   <!-- </span>
   <span class="n_line"> -->
       <a routerLink="#" class="bot"> <i class="fas fa-search"></i> Search</a>

@@ -10,8 +10,8 @@ import { ProductService } from './services/product.service';
 })
 
 export class CartComponent implements OnInit {
-private items: Item[] = [];
-private total = 0;
+public items: Item[] = [];
+public total = 0;
 
 constructor(
 private activatedRoute: ActivatedRoute,
@@ -61,6 +61,7 @@ loadCart(): void {
 this.total = 0;
 this.items = [];
 const cart = JSON.parse(localStorage.getItem('cart'));
+// tslint:disable-next-line: prefer-for-of
 for (let i = 0; i < cart.length; i++) {
 const item = JSON.parse(cart[i]);
 this.items.push({
@@ -84,6 +85,5 @@ break;
 localStorage.setItem('cart', JSON.stringify(cart));
 this.loadCart();
 }
-
 
 }

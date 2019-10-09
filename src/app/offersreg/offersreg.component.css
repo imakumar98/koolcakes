@@ -7,7 +7,7 @@
     .innercard{
       margin: auto;
       background-color: white;
-      height: 500px;
+      height: 550px;
       width: 800px;
       color: black;
     }
@@ -38,6 +38,9 @@
     }
     div{
       margin-left: 100px;
+    }
+    a{
+      text-decoration: none;
     }
    
     
