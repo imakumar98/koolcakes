@@ -4,6 +4,7 @@ import { CakeformData } from './cakeform.model';
 import { AngularFirestore } from '@angular/fire/firestore';
 // import { FirebaseService } from '../angularfire.service';
 import { Router } from '@angular/router';
+import { CartService } from './cakeform.service';
 
 @Component({
   selector: 'app-cakeform',
@@ -20,7 +21,8 @@ export class CakeformComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
               private fb: FormBuilder,
-              public router: Router) {}
+              public router: Router,
+              public cartservice: CartService) {}
 
 
   processForm(form: NgForm) {
@@ -37,11 +39,13 @@ export class CakeformComponent implements OnInit {
           email_ID: form.value.email,
           mobile_number: form.value.mno
         };
+        console.log(data);
+        this.cartservice.StoreAllCakeDetails(data);
         // this.firebaseService.addmessage(data).then(res => {
         //     form.reset();
         //   });
     }
-    this.router.navigate(['/']);
+    this.router.navigate(['/cart']);
   }
 
   // convenience getter for easy access to form fields

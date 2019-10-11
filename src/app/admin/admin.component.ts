@@ -22,13 +22,13 @@ export class AdminComponent implements OnInit {
         //   });
     }
 
-    OffersRegister() {
-        // this.http.get('http://localhost:3000/offersregister').subscribe(() => {
-        //     console.log('news runing');
-        //   }, error => {
-        //     console.log(error);
-        //   });
-    }
+    // OffersRegister() {
+    //     // this.http.get('http://localhost:3000/offersregister').subscribe(() => {
+    //     //     console.log('news runing');
+    //     //   }, error => {
+    //     //     console.log(error);
+    //     //   });
+    // }
 
     CakesRegister() {
         // this.http.get('http://localhost:3000/cakesregister').subscribe(() => {

@@ -11,12 +11,12 @@
         margin-top: 16%;
     } */
     footer{
-        background-color: #262261;
-        color: #a39fdc;
+        background-color: rgb(175, 97, 66);
+        color: wheat;
         margin-top: 20%;
         }
         a{
-            color: #a39fdc;
+            color: wheat;
         }
     
         .footlogo{

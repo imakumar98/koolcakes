@@ -1,6 +1,8 @@
 .pic1 img{
     width: 100%;
     height: 400px;
+    margin: auto;
+    padding: 0% 1% 1% 1%;
 }
 .pic2 .p2,.p3 {
     width: 450px;
@@ -8,9 +10,9 @@
     /* padding-bottom: 30px; */
 }
 .p2 {
-  
+    width:  100%;
     border-radius:20px;
-    margin-top:5%; 
+    margin:5% 2% 0% 2%;
 }
 .p3{
    margin-left:1%;
@@ -34,8 +36,9 @@ hr{
 }
 .content {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     padding:30px;
+    word-spacing: 3px;
 }
 .bestsell img {
     width: 150px;
@@ -57,6 +60,155 @@ hr{
 
 img.low{
     width:100%;    }
+
+.mostsell{
+    width: 100%;
+    border: 1px solid rgb(165, 112, 42);
+    /* height:400px; */
+    /* margin: auto; */
+    }
+.mostsell .single img {
+    width: 49.5%;
+    height:300px;
+}
+.mostsell .containsthree{
+    height: 300px;
+    width: 50%;
+    float: right;
+}
+.mostsell .b1 img{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 100px;
+ }
+ .alloccasion img{
+     width: 100%;
+     margin: 1% 0% 0% 0%;
+     height: 500px;
+ }
+ .wedanniversary{
+     width: 100%;
+     height: 250px;
+ }
+ .wedding{
+     margin:  2% 1% 2% 20%;
+     float: left;
+ }
+ .wedcont{
+    margin: 0px;
+    float: left;
+    padding-left: 15%;
+    padding-top: 10%;
+ }
+ .wed img{
+     width: 100%;
+     height: 250px;
+     margin: 1% 1% 1% 2%;
+ }
+ .wedding li {
+     list-style: none;
+ }
+ .anniver {
+     width:  50%;
+     float: right;
+     margin:  2% 1%2% 2%;
+ }
+ .anniver li{
+     list-style: none;
+ }
+ .annimg img{
+    width: 60%;
+     height: 250px;
+     margin: 1% 1% 1% 2%;
+ }
+.shortnotice img{
+    height: 400px;
+    width: 100%;
+}
+.novelty img {
+    height: 500px;
+    width: 100%;
+    margin: 1%;
+}
+.giftcake {
+    width: 92%;
+    height: 400px;
+    margin: 0% 10% 0% 8%;
+}
+.p1 img{
+    width: 23%;
+}
+.her{
+    width: 100%;
+    height: 300px;
+    padding: 8%;
+}
+.hertype{
+    float: left;
+    padding-left: 15%;
+    padding-top: 10%;
+}
+.hertype h6 {
+    background-color: rgb(207, 21, 83);
+    color: white;
+    padding-left: 30%;
+}
+
+.hertype li {
+    list-style: none;
+}
+.herimg{
+    float: right;
+}
+.him{
+    height: 300px;
+    width: 100%;
+    padding: 8%;
+}
+.himtype{
+    float: right;
+    padding-right: 25%;
+    padding-top: 10%;
+}
+.himtype h6 {
+    background-color: rgb(207, 21, 83);
+    color: white;
+    padding-left: 30%;
+}
+
+.himtype li {
+    list-style: none;
+}
+.himimg{
+    float: left;
+}
+.himimg img{
+    width: 80%;
+    height: 300px;
+}
+.buildacake {
+    width: 100%;
+}
+.buildacake img{
+    height: 400px;
+    width: 95%;
+    margin: 2% 1% 1% 2%;
+}
+.explore{
+    width: 100%;
+    height: 600px;
+}
+.explore .e1{
+    width:20%;
+    height: 300px;
+}
+.e1 img {
+    width:20%;
+    height: 300px;
+}
+
+
 @media only screen and (max-width: 600px) {
     img.low{
 width:100%;    }
@@ -65,7 +217,7 @@ width:100%;    }
 
 @media only screen and (max-width: 1024px) {
     img.p2{
-width:20%;
+width:14%;
 }
 
 div.col-md-3 {

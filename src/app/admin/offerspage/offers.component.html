@@ -1,0 +1,32 @@
+<mat-card>
+    <mat-card-title>
+        Offer Management Page
+    </mat-card-title>
+    <mat-card-content>
+        <div class="reg">
+                <a routerLink="/admin/offersreg">
+                    <button mat-raised-button>Register Offers</button>
+                </a> <br> <br>
+        </div>
+        
+        <div class="update">
+                <!-- <a routerLink="/admin/offersupdate"> -->
+                    <button mat-raised-button (onclick)="OffersUpdate();">Updare Offers</button>
+                <!-- </a>  -->
+                <br> <br>
+        </div>
+
+        <div class="delete">
+                <!-- <a routerLink="/admin/offersup"> -->
+                    <button mat-raised-button (onclick)="OffersDelete();">Delete Offer</button>
+                <!-- </a> <br> <br> -->
+                <br> <br>
+        </div>
+
+        <div class="getall">
+                <a routerLink="/admin/alloffers">
+                    <button mat-raised-button>All Offers</button>
+                </a> <br> <br>
+        </div>
+    </mat-card-content>
+</mat-card>

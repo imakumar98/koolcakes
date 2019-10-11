@@ -17,7 +17,7 @@ const multiparty = require('multiparty');
 
 
 // routes
-router.get("/getall",function(req,res){
+router.get("/getalloffers",function(req,res){
     OffersModel.find().then(list=>res.json(list))
     .catch(err=>res.status(500).json(" Sever Error"))
 })

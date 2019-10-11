@@ -14,8 +14,8 @@ export class Birthday1st25th50thComponent implements OnInit {
 
   ngOnInit() {}
 
-  AddtoCart(data) {
-    console.log(data);
-  }
+  // AddtoCart(data) {
+  //   console.log(data);
+  // }
 
 }

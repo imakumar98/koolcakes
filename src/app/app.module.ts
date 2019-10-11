@@ -42,7 +42,7 @@ import { CakeformComponent } from './cakeform/cakeform.component';
 import { AdminComponent } from './admin/admin.component';
 import { NewsregComponent } from './newsregister/newsreg.component';
 import { CakescategoryregComponent } from './cakecategory/cakecategoryreg.component';
-import { OffersregComponent } from './offersreg/offersreg.component';
+import { OffersregComponent } from './admin/offerspage/offersreg/offersreg.component';
 import { CakesregComponent } from './cakereg/cakereg.component';
 import { WeddingComponent } from './ourcakes/wedding/wedding.component';
 import { MothersDayComponent } from './ourcakes/mohersday/mothers.component';
@@ -94,9 +94,10 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import { environment } from 'src/environments/environment';
 import { CartComponent } from './cart/cart.component';
-
+import { CartService } from './cakeform/cakeform.service';
+import { OffersPageComponent } from './admin/offerspage/offers.component';
+import { AllOffersComponent } from './admin/offerspage/alloffers/alloffers.component';
 // import { ProductService } from './cart/services/product.service';
-// import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -169,7 +170,11 @@ import { CartComponent } from './cart/cart.component';
 
     CakeformComponent,
     SuperheroescakesComponent,
+
     OffersregComponent,
+    OffersPageComponent,
+    AllOffersComponent,
+
     NewsregComponent,
     CakescategoryregComponent,
     CakesregComponent,
@@ -194,7 +199,7 @@ import { CartComponent } from './cart/cart.component';
       AngularFirestoreModule,
       AngularFireDatabaseModule
   ],
-  // providers: [ProductService],
+  providers: [CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
