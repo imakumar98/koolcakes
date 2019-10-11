@@ -4,7 +4,7 @@ import { CakeformData } from './cakeform.model';
 // import { AngularFirestore } from '@angular/fire/firestore';
 // import { FirebaseService } from '../angularfire.service';
 import { Router } from '@angular/router';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -19,7 +19,6 @@ export class CakeformComponent implements OnInit, OnDestroy {
   // public cakedetails: Array<any> = [];
   subscribedRoute: any;
   routeData: Object = {};
-  
 
   constructor(private formBuilder: FormBuilder,
               private fb: FormBuilder,
@@ -59,10 +58,10 @@ export class CakeformComponent implements OnInit, OnDestroy {
         //   });
         const existingCartdata = JSON.parse(localStorage.getItem('cart')) || [];
         let updatedcart = [];
-        if (existingCartdata.length > 0){
+        if (existingCartdata.length > 0) {
           existingCartdata.push(data);
           updatedcart = existingCartdata;
-        }else{
+        } else {
           updatedcart = [data];
         }
         localStorage.setItem('cart', JSON.stringify(updatedcart));

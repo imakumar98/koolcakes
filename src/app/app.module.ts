@@ -7,7 +7,8 @@ import {MatToolbarModule,
         MatListModule,
         MatCardModule,
         MatFormFieldModule,
-        MatInputModule} from '@angular/material';
+        MatInputModule,
+        MatSelectModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -194,6 +195,7 @@ import { AllOffersComponent } from './admin/offerspage/alloffers/alloffers.compo
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSelectModule,
     AngularFireModule.initializeApp(environment.firebase),
       AngularFireAuthModule,
       AngularFirestoreModule,

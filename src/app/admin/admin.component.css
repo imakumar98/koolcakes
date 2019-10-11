@@ -9,5 +9,17 @@ h3{
     text-align: center;
 }
 .main {
-   text-align: center;
+   margin: 1% 1% 1% 2%;
+}
+.offer mat-select {
+    width: 13%;
+    height: 15px;
+    /* margin: 2% 10% 2% 10%; */
+}
+mat-option {
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
 }

@@ -4,4 +4,5 @@ export interface OffersData {
     Text: string;
     image: string;
     createdDate: string;
+    id: string;
   }

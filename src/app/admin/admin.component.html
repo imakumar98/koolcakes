@@ -2,19 +2,43 @@
     <h3>Welcome to Admin Pannel</h3> <br>
     <div class="main">
 
+
+        <span class="offer">
+                      <mat-select placeholder="MANAGE OFFERS">
+                          <mat-option>
+                               <a routerLink="/admin/offersreg">Offer register</a> 
+                          </mat-option>
+                          <mat-option>
+                                <a routerLink="/admin/alloffers">Offer's List</a> 
+                           </mat-option>
+
+                      </mat-select>
+                      
+                    </span>
+<!--         
         <div class="offer">        
             MANAGE OFFERS <br>
             <a routerLink="/admin/offerspage">
                 <button mat-raised-button>Offers</button>
             </a> <br> <br>
-        </div>
+        </div> -->
 
-        <div class="news">
-            ADD OR EDIT NEWS <br>
+        <span class="news">
+            <!-- <br>
             <a routerLink="/admin/newsregform">
                   <button mat-raised-button (onclick)="NewsRegister();">News</button>
-            </a> <br> <br>
-        </div>
+            </a> <br> <br> -->
+            <mat-select placeholder="ADD OR EDIT NEWS ">
+                    <mat-option>
+                         <a routerLink="/admin/newsregform">News register</a> 
+                    </mat-option>
+                    <mat-option>
+                          <a routerLink="/admin/alloffers">News List</a> 
+                     </mat-option>
+
+                </mat-select>
+                
+        </span>
 
         <div class="track">
             CHANGE ORDER STATUS <br>

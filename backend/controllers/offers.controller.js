@@ -42,7 +42,7 @@ router.post('/offersregister', app.post("/offersregister", (req, res) => {
             offers.Heading = fields.Heading;
             offers.Subheading = fields.Subheading;
             offers.Text = fields.Text;
-            offers.image = newpath;
+            offers.image = files.image.name;
             offers.save();
             res.send("offers Registered Successfully");
 
