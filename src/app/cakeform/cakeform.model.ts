@@ -9,4 +9,6 @@ export interface CakeformData {
   first_name: string;
   email_ID: string;
   mobile_number: number;
+  category: string;
+  subgroup: string;
   }

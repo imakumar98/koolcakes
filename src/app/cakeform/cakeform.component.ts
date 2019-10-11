@@ -1,28 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
 import { CakeformData } from './cakeform.model';
-import { AngularFirestore } from '@angular/fire/firestore';
+// import { AngularFirestore } from '@angular/fire/firestore';
 // import { FirebaseService } from '../angularfire.service';
 import { Router } from '@angular/router';
-import { CartService } from './cakeform.service';
+import { ActivatedRoute } from '@angular/router'
+
 
 @Component({
   selector: 'app-cakeform',
   templateUrl: './cakeform.component.html',
   styleUrls: ['./cakeform.component.css']
 })
-export class CakeformComponent implements OnInit {
+export class CakeformComponent implements OnInit, OnDestroy {
 
   registerForm: FormGroup;
   submitted = false;
   // public cakedetails: Array<any> = [];
-
-  ngOnInit() {}
+  subscribedRoute: any;
+  routeData: Object = {};
+  
 
   constructor(private formBuilder: FormBuilder,
               private fb: FormBuilder,
-              public router: Router,
-              public cartservice: CartService) {}
+              private router: Router,
+              private activatedRoute: ActivatedRoute
+              ) {
+                // router.events.subscribe(event => {
+                //   console.log(event);
+                // });
+              }
+
+              ngOnInit() {
+                this.subscribedRoute = this.activatedRoute.params.subscribe(params => {
+                 this.routeData = params;
+                 });
+               }
 
 
   processForm(form: NgForm) {
@@ -37,15 +50,24 @@ export class CakeformComponent implements OnInit {
           message_color: form.value.messagecolor,
           first_name: form.value.fullname,
           email_ID: form.value.email,
-          mobile_number: form.value.mno
+          mobile_number: form.value.mno,
+          category: this.routeData['category'],
+          subgroup: this.routeData['subgroup']
         };
-        console.log(data);
-        this.cartservice.StoreAllCakeDetails(data);
         // this.firebaseService.addmessage(data).then(res => {
         //     form.reset();
         //   });
+        const existingCartdata = JSON.parse(localStorage.getItem('cart')) || [];
+        let updatedcart = [];
+        if (existingCartdata.length > 0){
+          existingCartdata.push(data);
+          updatedcart = existingCartdata;
+        }else{
+          updatedcart = [data];
+        }
+        localStorage.setItem('cart', JSON.stringify(updatedcart));
+        this.router.navigate(['/cart']);
     }
-    this.router.navigate(['/cart']);
   }
 
   // convenience getter for easy access to form fields
@@ -60,5 +82,9 @@ export class CakeformComponent implements OnInit {
       }
 
       alert('SUCCESS!! :-)');
+  }
+
+  ngOnDestroy() {
+    this.subscribedRoute.unsubscribe();
   }
 }

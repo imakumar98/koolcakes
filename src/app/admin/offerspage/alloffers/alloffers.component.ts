@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { OffersData } from '../offers.models';
 
 @Component({
@@ -9,11 +9,11 @@ import { OffersData } from '../offers.models';
 
 export class AllOffersComponent implements OnInit {
 
-    // public data: OffersData[] = [];
-    // constructor(public http: HttpClient) {}
+    public data: OffersData[] = [];
+    constructor(public http: HttpClient) {}
     ngOnInit() {
-        // this.http.get<OffersData[]>('http://localhost:3000/getalloffers')
-        //          .map((res: any) => res.Record.map(r => this.data));
+        this.http.get<OffersData[]>('http://localhost:3000/offers/getalloffers').pipe((res: any) => res.Record.map(r => this.data));
+        console.log(this.data);
     }
 
 }
