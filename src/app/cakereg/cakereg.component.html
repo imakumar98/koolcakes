@@ -5,7 +5,7 @@
         Cake's Register Form
       </mat-card-title>
   <mat-card class="innercard">
-        <form (ngSubmit)="Offersreg(SignupForm)" #SignupForm="ngForm">
+        <form (ngSubmit)="Cakesreg(SignupForm)" #SignupForm="ngForm">
           <mat-form-field>
             <input type="text"
                     matInput
@@ -33,7 +33,7 @@
                             ngModel
                             placeholder="Cake Type"
                             #head= "ngModel" required>
-                    <mat-error *ngIf="head.invalid">Please Enter sub category's name!</mat-error>
+                    <mat-error *ngIf="head.invalid">Please Enter cake type!</mat-error>
                   </mat-form-field> <br> <br>
 
                   <mat-form-field>
@@ -43,7 +43,7 @@
                                 ngModel
                                 placeholder="Cake's Shape"
                                 #head= "ngModel" required>
-                        <mat-error *ngIf="head.invalid">Please Enter sub category's name!</mat-error>
+                        <mat-error *ngIf="head.invalid">Please Enter cake's shape!</mat-error>
                       </mat-form-field> <br> <br>
 
           <mat-form-field>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-offersreg',
@@ -10,7 +11,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
 export class OffersregComponent implements OnInit {
 
-    constructor(public http: HttpClient) {}
+    constructor(public http: HttpClient, private router: Router) {}
     selectedFile: File = null;
     ngOnInit() {}
 
@@ -41,6 +42,7 @@ export class OffersregComponent implements OnInit {
           }, error => {
             console.log(error);
           });
+      this.router.navigate(['/admin/alloffers']);
     }
 
   }

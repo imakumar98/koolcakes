@@ -1,16 +1,18 @@
 <div class="crd">
     <h3>Special Occassion Cakes</h3>
     <hr>
-    <div class="card-group 1">
-        <div class="card">
-            <a routerLink="/cakeform"><img class="card-img-top" src="../../assets/p7.png" alt="Superheroes"></a>
+    <div class="card-group">
+        <div class="card" *ngFor='let cake of data'>
+            <!-- {{cake.Image}} -->
+            <a routerLink="/cakeform"><img class="card-img-top" [src]="linkImg(cake.Image)" alt="Superheroes"></a>
             <div class="card-body">
+                <button mat-raised-button><b>{{cake.Price}}</b></button>
             </div>
             <div class="card-footer">
-                <strong>ALL SPORTS</strong>
+                <strong>{{cake.Name}}</strong>
             </div>
         </div>
-        <div class="card">
+        <!-- <div class="card">
             <a routerLink="/cakeform"><img class="card-img-top" src="../../assets/p7.png" alt="Cartoon characters"></a>
             <div class="card-body">
             </div>
@@ -33,11 +35,11 @@
             <div class="card-footer">
                 <strong>1st/25th/50th BIRTHDAYS</strong>
             </div>
-        </div>
+        </div> -->
     </div>
 
 
-
+<!-- 
     <div class="card-group b">
         <div class="card">
             <a routerLink="/cakeform"><img class="card-img-top" src="../../assets/p7.png" alt="All Disney princesses"></a>
@@ -79,7 +81,7 @@
                 <strong>ALL VIDEO GAMES</strong>
             </div>
         </div>
-    </div> <br>
+    </div> <br> -->
 
     <hr> <br>
     <div class="desc">

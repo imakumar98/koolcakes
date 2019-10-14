@@ -1,7 +1,7 @@
 .crd{
     background-color: aqua;
-    height: auto;
-    width: 75%;
+    width: 60%;
+    height: 100%;
     margin: auto;
 }
 .crd h3{
@@ -12,24 +12,43 @@
     margin-left:2%;
     margin-right:2%;
     margin-bottom: 2%;
+    height: 350px;
+    width: 20%;
    
+} 
+ .card img {
+    height: 200px;
+} 
+/* .card-group {
+    width: 800px;
+} */
+
+.card-body{
+    text-align: center;
+}
+button{
+    background-color: rgb(131, 235, 131);
+    color:black;
+}
+.card-footer {
+    text-align: center;
 }
 
-    div.card-group.b{
+/*    div.card-group.b{
 margin: auto;
     }
 
 .container{
     width: 75%;
     margin: auto;
-}
+}*/
 
 .card-footer{
     font-family: Alice-Regular;
 }
 .desc{
-    padding: 10px 40px 40px 40px;
+    padding: 20px 40px 40px 40px;
     color: black;
 
 }
-
+ 

@@ -8,7 +8,10 @@ import {MatToolbarModule,
         MatCardModule,
         MatFormFieldModule,
         MatInputModule,
-        MatSelectModule} from '@angular/material';
+        MatSelectModule,
+        MatRippleModule,
+        MatStepperModule,
+        MatMenuModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -41,7 +44,7 @@ import { CakeformComponent } from './cakeform/cakeform.component';
 // import {AngularFireAuthModule} from 'angularfire2/auth';
 // import { environment } from 'src/environments/environment';
 import { AdminComponent } from './admin/admin.component';
-import { NewsregComponent } from './newsregister/newsreg.component';
+import { NewsregComponent } from './admin/newspage/newsregister/newsreg.component';
 import { CakescategoryregComponent } from './cakecategory/cakecategoryreg.component';
 import { OffersregComponent } from './admin/offerspage/offersreg/offersreg.component';
 import { CakesregComponent } from './cakereg/cakereg.component';
@@ -95,10 +98,11 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import { environment } from 'src/environments/environment';
 import { CartComponent } from './cart/cart.component';
-import { CartService } from './cakeform/cakeform.service';
+// import { CartService } from './cakeform/cakeform.service';
 import { OffersPageComponent } from './admin/offerspage/offers.component';
 import { AllOffersComponent } from './admin/offerspage/alloffers/alloffers.component';
-// import { ProductService } from './cart/services/product.service';
+import { AllNewsComponent } from './admin/newspage/allnews/allnews.component';
+import { ProductService } from './cart/services/product.service';
 
 @NgModule({
   declarations: [
@@ -177,6 +181,8 @@ import { AllOffersComponent } from './admin/offerspage/alloffers/alloffers.compo
     AllOffersComponent,
 
     NewsregComponent,
+    AllNewsComponent,
+
     CakescategoryregComponent,
     CakesregComponent,
      CartComponent
@@ -188,6 +194,7 @@ import { AllOffersComponent } from './admin/offerspage/alloffers/alloffers.compo
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
@@ -196,12 +203,15 @@ import { AllOffersComponent } from './admin/offerspage/alloffers/alloffers.compo
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatRippleModule,
+    MatStepperModule,
+    MatMenuModule,
     AngularFireModule.initializeApp(environment.firebase),
       AngularFireAuthModule,
       AngularFirestoreModule,
       AngularFireDatabaseModule
   ],
-  providers: [CartService],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

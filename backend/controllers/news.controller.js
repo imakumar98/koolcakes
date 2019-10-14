@@ -43,7 +43,7 @@ router.post('/newsregister', app.post("/newsregister", (req, res) => {
             news.Heading = fields.Heading;
             news.Subheading = fields.Subheading;
             news.Text = fields.Text;
-            news.image = newpath;
+            news.image = files.image.name;
             news.save();
             res.send("News Registered Successfully");
 

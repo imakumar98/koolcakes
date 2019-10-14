@@ -1,4 +1,4 @@
-1. npm install jquery --save
+1. https://github.com/Kajol-Kumari/cake-site.git
 
 2. npm install popper.js --save
 
@@ -28,3 +28,6 @@ FOR BACKEND PART
 4. node app.js
 
 5. open https://localhost:3000
+
+6. Run mongodb-compass(in ubuntu terminal for connecting with mongodb compass)
+

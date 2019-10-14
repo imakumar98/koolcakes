@@ -1,4 +1,21 @@
-<div class="im">
-    <h2>Our Offers</h2>
-<img src="../../assets/p10.png" alt="">
-</div>
+<mat-card class="outer">
+    <mat-card-title>
+        OFFERS
+    </mat-card-title>
+    <mat-card-content>
+            <ul>
+                <li *ngFor="let d of data">
+                    <mat-card class="inner">
+                       <mat-card-title> {{d.Heading}} </mat-card-title>
+                       <mat-card-subtitle>{{d.Subheading}}</mat-card-subtitle>
+                       <mat-card-content>
+                       {{d.Text}} <br> <br>
+                       <img [src]="linkImg(d.image)" alt="Image" style="width: 500px; height: 250px;"> <br>
+                    <br> <br>
+                </mat-card-content>
+                 </mat-card>
+                </li>
+            </ul>
+    </mat-card-content>
+    <button mat-raised-button class="back"><a routerLink="/home">Back</a> </button>
+</mat-card>

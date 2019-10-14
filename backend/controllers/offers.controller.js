@@ -27,7 +27,7 @@ router.get("/getalloffers",function(req,res){
 router.post('/offersregister', app.post("/offersregister", (req, res) => {
     var form = new formidable.IncomingForm();
     form.parse(req, function (err, fields, files) {
-        console.log(fields)
+        // console.log(fields)
         // oldpath : temporary folder to which file is saved to
         var oldpath = files.image.path;
         var newpath = upload_path + files.image.name;

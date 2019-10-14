@@ -11,6 +11,7 @@ export class AllOffersComponent implements OnInit {
 
     public data: OffersData[] = [];
     constructor(public http: HttpClient) {}
+    public BASE_URL = 'http://localhost:3000';
     ngOnInit() {
         this.http.get('http://localhost:3000/offers/getalloffers').subscribe((res: OffersData[]) => {
             // console.log(res);
@@ -18,13 +19,20 @@ export class AllOffersComponent implements OnInit {
         });
         // console.log(this.data);
     }
+
+    linkImg(fileName) {
+        // base_URL returns localhost:3000 or the production URL
+            return `${this.BASE_URL}/Images/offers/${fileName}`;
+          }
     updateoffer(offerId: string) {
-        this.http.post('http://localhost:3000/offers/update/:id', offerId).subscribe(() => {
+        const url = 'http://localhost:3000/offers/update/' + offerId;
+        this.http.post(url, offerId).subscribe(() => {
             console.log('deleted');
         });
     }
     deleteoffer(offerId: string) {
-        this.http.post('http://localhost:3000/offers/delete/:id', offerId).subscribe(() => {
+        const url = 'http://localhost:3000/offers/delete/' + offerId;
+        this.http.post(url, offerId).subscribe(() => {
             console.log('deleted');
         });
     }

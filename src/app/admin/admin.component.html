@@ -1,64 +1,85 @@
 <body>
-    <h3>Welcome to Admin Pannel</h3> <br>
-    <div class="main">
-
-
-        <span class="offer">
-                      <mat-select placeholder="MANAGE OFFERS">
-                          <mat-option>
-                               <a routerLink="/admin/offersreg">Offer register</a> 
-                          </mat-option>
-                          <mat-option>
-                                <a routerLink="/admin/alloffers">Offer's List</a> 
-                           </mat-option>
-
-                      </mat-select>
-                      
-                    </span>
-<!--         
-        <div class="offer">        
-            MANAGE OFFERS <br>
-            <a routerLink="/admin/offerspage">
-                <button mat-raised-button>Offers</button>
-            </a> <br> <br>
-        </div> -->
-
-        <span class="news">
-            <!-- <br>
-            <a routerLink="/admin/newsregform">
-                  <button mat-raised-button (onclick)="NewsRegister();">News</button>
-            </a> <br> <br> -->
-            <mat-select placeholder="ADD OR EDIT NEWS ">
-                    <mat-option>
-                         <a routerLink="/admin/newsregform">News register</a> 
-                    </mat-option>
-                    <mat-option>
-                          <a routerLink="/admin/alloffers">News List</a> 
-                     </mat-option>
-
-                </mat-select>
-                
-        </span>
-
-        <div class="track">
-            CHANGE ORDER STATUS <br>
-            <!-- <a routerLink="http://localhost:3000/"> -->
-                <button mat-raised-button (onclick)="NewsRegister();">Order Status</button> <br> <br>
+        <h3>Welcome to Admin Pannel</h3> <br>
+        <div class="main">
+    <div class ="row">
+    <div class = "col">
+            <span class="offer">
+                         <!--  <mat-select placeholder="MANAGE OFFERS">
+                              <mat-option>
+                                   <a routerLink="/admin/offersreg">Offer register</a> 
+                              </mat-option>
+                              <mat-option>
+                                    <a routerLink="/admin/alloffers">Offer's List</a> 
+                               </mat-option>
+    
+                          </mat-select> -->
+                          <button mat-button [matMenuTriggerFor]="menu">MANAGE OFFERS</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/admin/offersreg">Offer register</button>
+      <button mat-menu-item routerLink="/admin/alloffers">Offer's List</button>
+    </mat-menu>
+                          
+                        </span>
+                    </div>
+    <!--         
+            <div class="offer">        
+                MANAGE OFFERS <br>
+                <a routerLink="/admin/offerspage">
+                    <button mat-raised-button>Offers</button>
+                </a> <br> <br>
+            </div> -->
+    
+    <div class = "col">
+            <span class="news">
+                <!-- <br>
+                <a routerLink="/admin/newsregform">
+                      <button mat-raised-button (onclick)="NewsRegister();">News</button>
+                </a> <br> <br> -->
+               <!--  <mat-select placeholder="ADD OR EDIT NEWS ">
+                        <mat-option>
+                             <a routerLink="/admin/newsregform">News register</a> 
+                        </mat-option>
+                        <mat-option>
+                              <a routerLink="/admin/alloffers">News List</a> 
+                         </mat-option>
+    
+                    </mat-select> -->
+                    <button mat-button [matMenuTriggerFor]="menu1" >ADD OR EDIT NEWS</button>
+    <mat-menu #menu1="matMenu">
+      <button mat-menu-item routerLink="/admin/newsregform">News register</button>
+      <button mat-menu-item routerLink="/admin/alloffers">News List</button>
+    </mat-menu>
+                    
+            </span>
         </div>
-
-        <div class="cakes">
-            ADD CAKES <br>
-            <a routerLink="/admin/cakecatreg">
-                <button mat-raised-button (onclick)="CakesRegister();">Category's cake</button>
-        </a><br> <br>
+        <div class = "col">
+            <div class="track">
+              <!--   CHANGE ORDER STATUS <br> -->
+                <!-- <a routerLink="http://localhost:3000/"> -->
+                    <button mat-raised-button (onclick)="NewsRegister();">Order Status</button> <br> <br>
+            </div>
         </div>
-
-        <div class="cakes">
-                ADD CAKES <br>
-                <a routerLink="/admin/cakereg">
-                    <button mat-raised-button (onclick)="CakesRegister();">Add cake</button>
+        <div class = "col">
+            <div class="cakes">
+             <!--    ADD CAKES <br> -->
+                <a routerLink="/admin/cakecatreg">
+                    <button mat-raised-button (onclick)="CakesRegister();">Category's cake</button>
             </a><br> <br>
             </div>
-
-    </div>
-</body>
+        </div>
+        <div class = "col">
+            <div class="cakes">
+                    <!-- ADD CAKES <br>
+                    <a routerLink="/admin/cakereg">
+                        <button mat-raised-button (onclick)="CakesRegister();">Add cake</button>
+                </a> --><!-- <br> <br> -->
+                <button mat-button [matMenuTriggerFor]="menu2" >Add cake</button>
+    <mat-menu #menu2="matMenu">
+      <button mat-menu-item routerLink="/admin/cakereg">Cake register</button>
+      <button mat-menu-item routerLink="/admin/alloffers">Cake List</button>
+    </mat-menu>
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>

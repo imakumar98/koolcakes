@@ -20,7 +20,7 @@ import { BabyshowerComponent } from './ourcakes/baby_shower/baby_shower.componen
 import { SuperheroescakesComponent } from './birthdaycakes/superheroes/super.component';
 import { CakeformComponent } from './cakeform/cakeform.component';
 import { AdminComponent } from './admin/admin.component';
-import { NewsregComponent } from './newsregister/newsreg.component';
+import { NewsregComponent } from './admin/newspage/newsregister/newsreg.component';
 import { CakescategoryregComponent } from './cakecategory/cakecategoryreg.component';
 import { OffersregComponent } from './admin/offerspage/offersreg/offersreg.component';
 import { CakesregComponent } from './cakereg/cakereg.component';
@@ -69,6 +69,7 @@ import { Formula1cakesComponent } from './sportscakes/formula_1/formula1.compone
 import { CartComponent } from './cart/cart.component';
 import { OffersPageComponent } from './admin/offerspage/offers.component';
 import { AllOffersComponent } from './admin/offerspage/alloffers/alloffers.component';
+import { AllNewsComponent } from './admin/newspage/allnews/allnews.component';
 
 
 const routes: Routes = [
@@ -84,7 +85,9 @@ const routes: Routes = [
   {path: 'cakeform', component: CakeformComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'admin/cakecatreg', component: CakescategoryregComponent},
+
   {path: 'admin/newsregform', component: NewsregComponent},
+  {path: 'admin/allnews', component: AllNewsComponent},
 
   {path: 'admin/offerspage', component: OffersPageComponent},
   {path: 'admin/offersreg', component: OffersregComponent},

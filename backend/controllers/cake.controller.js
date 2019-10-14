@@ -11,7 +11,6 @@ var formidable = require('formidable');
 var upload_path = "./Images/cakes/";
 const multiparty = require('multiparty');
 
-
 // routes
 router.get("/getall", function (req, res) {
     CakesModel.find().then(list => res.json(list))
@@ -19,38 +18,36 @@ router.get("/getall", function (req, res) {
 })
 
 router.get("/getcakebycategory", function (req, res) {
-    console.log(req.body)
-    CakesModel.find({Category:req.body.Category,
-                    SubCategory:req.body.SubCategory
+    // console.log(req.query.category);
+    // console.log(req.query.subcategory);
+    CakesModel.find({Category:req.query.category,
+                    SubCategory:req.query.subcategory
     }).then(list => res.json(list))
         .catch(err => res.status(500).json(" Server Error"))
 })
 
 
 router.post('/cakesregister', app.post("/cakesregister", (req, res) => {
+
+
     //console.log(req.body);
     var form = new formidable.IncomingForm();
     form.parse(req, function (err, fields, files) {
-        // console.log(fields)
         // oldpath : temporary folder to which file is saved to
-        var oldpath = files.Image.path;
-        var newpath = upload_path + ''+new Date().getMilliseconds()+files.Image.name;
-        // console.log(files.image.type)
+        var oldpath = files.image.path;
+        var newpath = upload_path + files.image.name;
         // copy the file to a new location
         mv(oldpath, newpath, function (err) {
             if (err) throw err;
             // you may respond with another html page
-
-            // console.log(newpath)
-
             var cakecategory = new CakesModel();
             cakecategory.Category= fields.Category;
             cakecategory.SubCategory = fields.SubCategory;
-            cakecategory.Text = fields.Text;
+            // cakecategory.Text = fields.Text;
             cakecategory.Shape = fields.Shape;
             cakecategory.Name = fields.Name;
             cakecategory.Price = fields.Price;
-            cakecategory.Image = newpath;
+            cakecategory.Image = files.image.name;
             cakecategory.save();
             res.send("cakecategory Registered Successfully");
 
