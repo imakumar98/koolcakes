@@ -1,5 +1,41 @@
+<!-- <h3>Your Cart</h3>
+{{products}} <br>
+{{quantity}} -->
+<div class="cart">
 <h3>Your Cart</h3>
-<div class="tbl">
+<mat-card class="example-card col-6" *ngFor= "let x of cartValue; index as j" >
+       
+    <mat-card-header>
+      
+      <mat-card-title>Order Details
+            <br>
+            NAME: {{temp.name}} <br>
+            PRICE: {{temp.price}} <br>
+            CATEGORY: {{temp.category}} <br>
+            SUBCATEGORY: {{temp.subcategory}} <br>
+        QUANTITY: {{quantity}}
+      </mat-card-title>
+     
+    </mat-card-header>
+   
+    <mat-card-content>
+      <div  *ngFor= "let y of x | keyvalue: keepOrder ; index as i " >
+        <div class= "row">
+            <div class="col-3">
+     {{y.key}}</div> <div class="col-3">{{y.value}}</div>
+    </div>
+</div>
+         <mat-card-actions>
+                    <button mat-button (click)="addItem(x)">ADD CAKE</button>
+                    <button mat-button (click)="removeItem(x)">REMOVE CAKE</button>
+                    <button mat-button routerLink="/home" (click)="placeOrder(x)">Place Order</button>
+                  </mat-card-actions>
+    </mat-card-content>
+   
+      
+  </mat-card>
+</div>
+<!-- <div class="tbl">
 <table border="1">
     <tr>
         <th>Option</th>
@@ -10,50 +46,23 @@
         <th>Quantity</th>
         <th>Sub Total</th>
     </tr>
-        <tr *ngFor="let data of cartData">
-            <td>
-                    {{data.size}}
-            </td>
-            <td>
-                {{data.email_ID}}
-            </td>
-            <td>
-                {{data.price}}
-            </td>
-
-            
-        </tr>
-
-    {{cartData|json}}
-    <!-- <tr *ngFor="let item of cartData; let index=i;">
+    <tr *ngFor="let item of products">
         <td align="center">
-            <a (click)="remove(item.product.id)">X</a>
+            <a (click)="remove(item.id)">X</a>
         </td>
-        <td>{{item.product.id}}</td>
-        <td>{{item.product.name}}</td>
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
         <td>
             <img src="assets/{{item.product.photo}}" width="50" alt="SELECTED CAKE IMAGE">
         </td>
-        <td>{{item.product.price}}</td>
-        <td>{{item.quantity}}</td>
-        <td>{{item.product.price * item.quantity}}</td>
-    </tr> -->
-    <!-- <tr *ngFor="let item of items">
-        <td align="center">
-            <a (click)="remove(item.product.id)">X</a>
-        </td>
-        <td>{{item.product.id}}</td>
-        <td>{{item.product.name}}</td>
-        <td>
-            <img src="assets/{{item.product.photo}}" width="50" alt="SELECTED CAKE IMAGE">
-        </td>
-        <td>{{item.product.price}}</td>
-        <td>{{item.quantity}}</td>
-        <td>{{item.product.price * item.quantity}}</td>
-    </tr> -->
+        <td>{{item.price}}</td>
+        <td>{{quantity}}</td>
+        <td>{{item.price * quantity}}</td>
+    </tr>
     <tr>
         <td colspan="6" align="right">Total</td>
         <td>{{total}}</td>
     </tr>
 </table>
-</div>
+</div> -->
+

@@ -11,4 +11,6 @@ export interface CakeformData {
   mobile_number: number;
   category: string;
   subgroup: string;
+  // name: string;
+  // price: string;
   }

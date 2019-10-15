@@ -1,3 +1,12 @@
-h3{
+.example-card {
+    max-width: 400px;
+    box-sizing: border-box !important;
+  }
+  .cart {
     text-align: center;
-}
+    margin: 8px;
+  }
+  /* .cart {
+    text-align: center;
+    margin: auto;
+  } */

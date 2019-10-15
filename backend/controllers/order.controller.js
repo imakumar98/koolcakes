@@ -34,19 +34,32 @@ router.post('/placeorder', app.post("/placeorder", (req, res) => {
             if (err) throw err;
             // you may respond with another html page*/
 
-    console.log(req.body);
+    // console.log(req.body);
     var now = new Date();
 
     var placeorder = new PlaceOrderModel(
     );
-    placeorder.orderID = now.getDate() + '' + now.getMonth() + '' + now.getFullYear() + '' + req.body.User.userId + '' + now.getMilliseconds()
-    placeorder.User = req.body.User;
-    placeorder.Cakes = req.body.Cakes;
-    placeorder.Address = req.body.Address;
-    placeorder.Price = req.body.Price;
+    // placeorder.orderID = now.getDate() + '' + now.getMonth() + '' + now.getFullYear() + '' + req.body.User.userId + '' + now.getMilliseconds()
+    placeorder.orderID = now.getDate() + '' + now.getMonth() + '' + now.getFullYear() + '' + now.getMilliseconds()
+    // console.log(req.body);
+    placeorder.size = req.body.size;
+    placeorder.spongetype = req.body.spongetype;
+    placeorder.cream = req.body.cream;
+    placeorder.egg_or_eggless = req.body.egg_or_eggless;
+    placeorder.cake_filler = req.body.cake_filler;
+    placeorder.message = req.body.message;
+    placeorder.message_color = req.body.message_color;
+    placeorder.first_name = req.body.first_name;
+    placeorder.email_ID = req.body.email_ID;
+    placeorder.mobile_number = req.body.mobile_number;
+    placeorder.category = req.body.category;
+    placeorder.subcategory = req.body.subcategory;
+    placeorder.name = req.body.name;
+    placeorder.price = req.body.price;
+    // placeorder.User = req.body.User;
     placeorder.save()
         .then(result => {
-            console.log('came here')
+            console.log('came here');
             console.log(result)
             //createInvoice(result, "./Images/invoice.pdf");
             res.status(201).json(result);

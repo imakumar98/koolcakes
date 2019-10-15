@@ -18,7 +18,7 @@ export class CakeformComponent implements OnInit, OnDestroy {
   submitted = false;
   // public cakedetails: Array<any> = [];
   subscribedRoute: any;
-  routeData: Object = {};
+  routeData: any;
 
   constructor(private formBuilder: FormBuilder,
               private fb: FormBuilder,
@@ -33,6 +33,8 @@ export class CakeformComponent implements OnInit, OnDestroy {
               ngOnInit() {
                 this.subscribedRoute = this.activatedRoute.params.subscribe(params => {
                  this.routeData = params;
+                 console.log(this.routeData);
+                 localStorage.setItem('nameprice', JSON.stringify(this.routeData));
                  });
                }
 
@@ -50,8 +52,11 @@ export class CakeformComponent implements OnInit, OnDestroy {
           first_name: form.value.fullname,
           email_ID: form.value.email,
           mobile_number: form.value.mno,
-          category: this.routeData['category'],
-          subgroup: this.routeData['subgroup']
+         // tslint:disable-next-line:no-string-literal
+         category: this.routeData['category'],
+          // tslint:disable-next-line:no-string-literal
+          subgroup: this.routeData['subgroup'],
+        //  price: this.routeData
         };
         // this.firebaseService.addmessage(data).then(res => {
         //     form.reset();

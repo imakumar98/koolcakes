@@ -78,6 +78,11 @@
       <button mat-menu-item routerLink="/admin/cakereg">Cake register</button>
       <button mat-menu-item routerLink="/admin/alloffers">Cake List</button>
     </mat-menu>
+    
+    <button mat-button [matMenuTriggerFor]="menu2" >Orders</button>
+    <mat-menu #menu2="matMenu">
+      <button mat-menu-item routerLink="/admin/orders">All Orders</button>
+    </mat-menu>
                 </div>
             </div>
             </div>

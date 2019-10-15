@@ -9,7 +9,7 @@ import { SignupData } from './signup/signup.model';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  public loggedIn;
+  public loggedIn = false;
   private isAuthenticated = false;
   private token: string;
   private tokenTimer: any;
@@ -44,11 +44,11 @@ export class AuthService {
     this.http
       .post('http://localhost:3000/api/user/register', payload)
       .subscribe(() => {
-        this.loggedIn = true;
         this.router.navigate(['/']);
       }, error => {
         this.authStatusListener.next(false);
       });
+    this.loggedIn = true;
   }
 
   login(emal: string, pass: string) {
@@ -74,6 +74,7 @@ export class AuthService {
           );
           // console.log(expirationDate);
           this.loggedIn = true;
+          console.log(this.loggedIn);
           this.saveAuthData(token, expirationDate);
           this.router.navigate(['/']);
         }

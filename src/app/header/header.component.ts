@@ -10,14 +10,17 @@ export class HeaderComponent implements OnInit {
   public loggedIn;
 
   constructor(public authService: AuthService) {
-    this.loggedIn = this.authService.loggedIn;
+    console.log(this.authService.loggedIn);
   }
 
   ngOnInit() {
-
   }
   onLogout() {
     this.authService.logout();
+  }
+  logIn() {
+    this.loggedIn = this.authService.loggedIn;
+    console.log(this.authService.loggedIn);
   }
 
 }

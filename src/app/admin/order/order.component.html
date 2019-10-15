@@ -1,0 +1,27 @@
+<!-- <mat-card class="outer">
+    <mat-card-title>
+        LIST OF OFFERS
+    </mat-card-title>
+    <mat-card-content>
+            <ul>
+                <li *ngFor="let d of data">
+                    <mat-card class="inner">
+                       <mat-card-title> {{d.category}} </mat-card-title>
+                       <mat-card-subtitle>{{d.subcategory}}</mat-card-subtitle>
+                       <mat-card-content>
+                       Cake's Name: {{d.name}} <br> <br>
+                       Cake's Size: {{d.size}} <br> <br>
+                       Sponge Type: {{d.spongetype}} <br> <br>
+                       {{d.cream}} <br> <br>
+                       <img [src]="linkImg(d.image)" alt="Image" style="width: 500px; height: 250px;"> <br>
+                    <br> <br>
+                    {{d.createdDate}} <br> <br>
+                    <button mat-raised-button class="up" (click)="updateoffer(d.id);"> <a [routerLink]="['/editoffer', d.id]" routerLinkActive="router-link-active"></a> Update </button>
+                    <button mat-raised-button class="del" (click)="deleteoffer(d.id);">Delete</button>
+                </mat-card-content>
+                 </mat-card>
+                </li>
+            </ul>
+    </mat-card-content>
+    <button mat-raised-button class="back"><a routerLink="/admin/offerspage">Back</a> </button>
+</mat-card> -->
