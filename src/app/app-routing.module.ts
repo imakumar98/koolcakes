@@ -101,7 +101,7 @@ const routes: Routes = [
   {path: 'header', component: HeaderComponent},
   // {path: 'cakeform', component: CakeformComponent},
   {path: 'cakeform/:category/:subcategory/:name/:price', component: CakeformComponent},
-  // {path: 'page-not-found',component: PageNotFoundComponent},
+  {path: 'page-not-found',component: ContactComponent},
 
   {path: 'admin', component: AdminComponent},
   {path: 'admin/cakecatreg', component: CakescategoryregComponent},

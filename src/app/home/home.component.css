@@ -3,6 +3,10 @@ h2,h3{
     margin-bottom:50px;
 }
 
+h5{
+    font-family: 'Bree Serif';
+}
+
 #content-container{
     max-width:1600px;
     padding-left:30px;
@@ -164,6 +168,16 @@ h2,h3{
 #explore-more .explore-image-div:hover{
     transform:scale(1.08);
 }
+
+#trust-points{
+    padding-bottom: 20px;
+}
+
+#trust-points .trust-block{
+    border-right:1px solid #ddd;
+    padding:20px;
+}
+
 
 
 
