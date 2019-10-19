@@ -1,39 +1,47 @@
-<div class="content-div">
+<!-- <div class="content-div">
     <div class="banner">
-        <div class="container" style="max-width:1600px; padding-right:0px; padding-left:0px">
+        <div>
             <a routerLink=""> 
                 <img src="../../assets/halloween_banner.png" alt="" class="img-fluid">
             </a>
         </div>
     </div>
-</div>
+</div> -->
+<div class="banner">
+        <div>
+            <a routerLink=""> 
+                <img src="../../assets/halloween_banner.png" alt="" class="img-fluid">
+            </a>
+        </div>
+    </div>
 <div class="container" id="content-container">
     <div class="categories" id="cake-categories">
+        <h2 class="text-center">Cake Categories</h2>
         <div class="row">
             <div class="col-md-4">
                 <div class="category-image-div">
-                    <a routerLink="">
+                    <a routerLink="/page-not-found">
                         <img src="../../assets/retirement.jpg" alt="retirement cake" class="img-fluid category-image"/>
                     </a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="category-image-div">
-                    <a routerLink="">
+                    <a routerLink="/page-not-found">
                         <img src="../../assets/graduation.jpg" alt="retirement cake" class="img-fluid category-image"/>
                     </a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="category-image-div">
-                    <a routerLink="">
+                    <a routerLink="/page-not-found">
                         <img src="../../assets/short notice cakes_1.jpg" alt="retirement cake" class="img-fluid category-image"/>
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    <hr class="hr">
+
 
     <!--Explore our most selling cakes-->
     <div id="most-selling-cakes">
@@ -50,16 +58,16 @@
                 </div>
             </div>
         
-            <div class="col-md-6">
-                <div class="most-selling-image-div">
-                    <img src="../../assets/photo cakes.jpg" alt="photo cake" class="img-fluid">
+                <!-- <div class="col-md-6">
+                    <div class="most-selling-image-div">
+                        <img src="../../assets/photo cakes.jpg" alt="photo cake" class="img-fluid">
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="most-selling-image-div">
-                    <img src="../../assets/theme cakes.jpg" alt="" class="img-fluid">
-                </div>
-            </div>
+                <div class="col-md-6">
+                    <div class="most-selling-image-div">
+                        <img src="../../assets/theme cakes.jpg" alt="" class="img-fluid">
+                    </div>
+                </div> -->
         </div>
     </div>
     
@@ -141,28 +149,37 @@
 
     <!--Gift Cake-->
     <div id="gift-cake">
-        <h3 class="text-center">Gift A Cake</h3>
+        <h2 class="text-center">Gift a Cake</h2>
+        <br/>
         <div class="row">
             <div class="col-md-3">
                 <div class="gift-cake-div text-center">
-                    <img src="../../assets/friend.png" alt="" class="img-fluid">
+                    <a routerLink="/page-not-found">
+                        <img src="../../assets/friend.png" alt="" class="img-fluid">
+                    </a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="gift-cake-div text-center">
-                    <img src="../../assets/closed_one.png" alt="" class="img-fluid">
+                    <a routerLink="/page-not-found">
+                        <img src="../../assets/closed_one.png" alt="" class="img-fluid">
+                    </a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="gift-cake-div text-center">
-                    <img src="../../assets/boss.png" alt="" class="img-fluid">
+                    <a routerLink="/page-not-found">
+                        <img src="../../assets/boss.png" alt="" class="img-fluid">
+                    </a>
                 </div>
             </div>
             <div class="col-md-3">
-                    <div class="gift-cake-div text-center">
+                <div class="gift-cake-div text-center">
+                    <a routerLink="/page-not-found">
                         <img src="../../assets/someone_special.png" alt="" class="img-fluid">
-                    </div>
+                    </a>
                 </div>
+            </div>
         </div>
     </div>
     <!--End of Gift Cake-->
@@ -174,13 +191,13 @@
     <div id="him-her">
         <div class="row her-row">
             <div class="col-md-6">
-                <div class="for-her-list" style="display:inline-block;">
-                    <!-- <p>For Her</p> -->
+                <div class="for-her-list">
+                    <h3>For Her</h3>
                     <ul>
-                        <li>For Girlfriend <i class="fas fa-caret-right"></i></li>
-                        <li>For Wife <i class="fas fa-caret-right"></i></li>
-                        <li>For Sister <i class="fas fa-caret-right"></i></li>
-                        <li>For Mother <i class="fas fa-caret-right"></i></li>
+                        <li><a routerLink="/page-not-found"> For Girlfriend <i class="fa fa-caret-right"></i></a></li>
+                        <li><a routerLink="/page-not-found"> For Wife <i class="fa fa-caret-right"></i></a></li>
+                        <li><a routerLink="/page-not-found"> For Sister <i class="fa fa-caret-right"></i></a></li>
+                        <li><a routerLink="/page-not-found"> For Mother <i class="fa fa-caret-right"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -190,6 +207,7 @@
                 </div>
             </div>
         </div>
+        <br/><br/>
         <div class="row him-row">
             <div class="col-md-6">
                 <div class="for-him-image">
@@ -198,11 +216,12 @@
             </div>
             <div class="col-md-6">
                 <div class="for-him-list">
+                    <h3>For Him</h3>
                     <ul>
-                        <li>For Boyfriend <i class="fas fa-caret-right"></i></li>
-                        <li>For Husband <i class="fas fa-caret-right"></i></li>
-                        <li>For Brother <i class="fas fa-caret-right"></i></li>
-                        <li>For Father <i class="fas fa-caret-right"></i></li>
+                        <li><a routerLink="/page-not-found"> For Girlfriend <i class="fa fa-caret-right"></i></a></li>
+                        <li><a routerLink="/page-not-found"> For Wife <i class="fa fa-caret-right"></i></a></li>
+                        <li><a routerLink="/page-not-found"> For Sister <i class="fa fa-caret-right"></i></a></li>
+                        <li><a routerLink="/page-not-found"> For Mother <i class="fa fa-caret-right"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -212,55 +231,73 @@
 
     <!--Build a cake-->
     <div id="build-cake">
-        <img src="../../assets/buildacake.png" alt="" class="img-fluid">
+        <a routerLink="/page-not-found">
+            <img src="../../assets/buildacake.png" alt="" class="img-fluid">
+        </a>
     </div>
     <!--End of build cake-->
 
     <!--Explore more-->
     <div id="explore-more">
-        <h3 class="text-center">Explore Our Range</h3>
+        <h2 class="text-center">Explore Our Range</h2>
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-6">
                 <div class="explore-image-div">
-                    <img src="../../assets/iphone1.png" alt="" class="img-fluid"/>
+                    <a routerLink="/page-not-found">
+                        <img src="../../assets/iphone1.png" alt="" class="img-fluid"/>
+                    </a>
+                    
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-6">
                 <div class="explore-image-div">
-                    <img src="../../assets/bag11.png" alt="" class="img-fluid" />
+                    <a routerLink="/page-not-found">
+                        <img src="../../assets/bag11.png" alt="" class="img-fluid" />
+                    </a>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-6">
                 <div class="explore-image-div">
-                    <img src="../../assets/car1.png" alt="" class="img-fluid" />
+                    <a routerLink="/page-not-found">
+                        <img src="../../assets/car1.png" alt="" class="img-fluid" />
+                    </a>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-6">
                 <div class="explore-image-div">
-                    <img src="../../assets/casino1.png" alt="" class="img-fluid" />
+                    <a routerLink="/page-not-found">
+                        <img src="../../assets/casino1.png" alt="" class="img-fluid" />
+                    </a>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-6">
                 <div class="explore-image-div">
-                    <img src="../../assets/cricket1.png" alt="" class="img-fluid"/>
+                    <a routerLink="/page-not-found">
+                        <img src="../../assets/cricket1.png" alt="" class="img-fluid"/>
+                    </a>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-6">
                 <div class="explore-image-div">
-                    <img src="../../assets/crown1.png" alt="" class="img-fluid" />
+                    <a routerLink="/page-not-found">
+                        <img src="../../assets/crown1.png" alt="" class="img-fluid" />
+                    </a>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-6">
                 <div class="explore-image-div">
-                    <img src="../../assets/doctor1.png" alt="" class="img-fluid" />
+                    <a routerLink="/page-not-found">
+                        <img src="../../assets/doctor1.png" alt="" class="img-fluid" />
+                    </a>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-6">
                 <div class="explore-image-div">
                     <img src="../../assets/drip1.png" alt="">
                 </div>
             </div>
         </div>
+        
     </div>
     <!--End of explore more-->
     
