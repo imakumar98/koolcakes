@@ -68,7 +68,7 @@
             </div>
         </div>
         <div class = "col">
-            <div class="cakes">
+            <span class="cakes">
                     <!-- ADD CAKES <br>
                     <a routerLink="/admin/cakereg">
                         <button mat-raised-button (onclick)="CakesRegister();">Add cake</button>
@@ -78,12 +78,15 @@
       <button mat-menu-item routerLink="/admin/cakereg">Cake register</button>
       <button mat-menu-item routerLink="/admin/alloffers">Cake List</button>
     </mat-menu>
-    
-    <button mat-button [matMenuTriggerFor]="menu2" >Orders</button>
-    <mat-menu #menu2="matMenu">
-      <button mat-menu-item routerLink="/admin/orders">All Orders</button>
-    </mat-menu>
-                </div>
+</span>
+            </div>
+            <div class="col">
+                 
+    <!-- <button mat-button [matMenuTriggerFor]="menu3" >Orders</button> -->
+    <!-- <mat-menu #menu2="matMenu"> -->
+      <button mat-raised-button routerLink="/admin/orders">All Orders</button>
+      <!-- <button mat-raised-button (onclick)="CakesRegister();">Category's cake</button> -->
+    <!-- </mat-menu> -->
             </div>
             </div>
         </div>

@@ -13,4 +13,6 @@ export interface OrdersData {
     subcategory: string;
     name: string;
     price: string;
+    id: string;
+    createdDate: string;
   }

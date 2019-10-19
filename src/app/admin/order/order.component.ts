@@ -17,6 +17,13 @@ export class AllOrdersComponent implements OnInit {
             // console.log(res);
             this.data = res;
         });
-        // console.log(this.data);
+        // console.log(this.data);wh
+    }
+    deleteorder(offerId: string) {
+        console.log(offerId);
+        const url = 'http://localhost:3000/order/delete/' + offerId;
+        this.http.post(url, offerId).subscribe(() => {
+            console.log('deleted');
+        });
     }
 }

@@ -1,19 +1,115 @@
-.pic1 img{
-    width: 100%;
-    height: 400px;
-    margin: auto;
-    padding: 0% 1% 1% 1%;
+#content-container{
+    max-width:1600px;
+    padding-left:30px;
+    padding-right:30px;
 }
-.pic2 .p2,.p3 {
-    width: 450px;
-    height: 250px;
-    /* padding-bottom: 30px; */
+
+#cake-categories{
+    padding-top:50px;
+    padding-bottom:50px;
 }
-.p2 {
-    width:  100%;
-    border-radius:20px;
-    margin:5% 2% 0% 2%;
+
+#cake-categories .category-image-div{
+    padding:10px;
 }
+
+#cake-categories .category-image{
+    border-radius:8px;
+    transition:transform 0.3s;
+}
+
+#cake-categories .category-image:hover{
+    transform:scale(1.08);
+}
+
+.hr{
+    margin-top:0px;
+}
+
+#most-selling-cakes{
+    margin-bottom:60px;
+}
+
+#most-selling-cakes .most-selling-image-div{
+    padding:30px;
+}
+
+#wedding-and-anniversary{
+    margin-bottom:90px;
+}
+
+#gift-cake{
+    margin-bottom:90px;
+}
+
+#him-her{
+    margin-bottom:90px;
+}
+
+#him-her .her-row{
+    margin-bottom:50px;
+}
+
+
+
+#him-her .for-her-list{
+    width:300px;
+    margin-left:50px;
+    display:block;
+}
+
+#him-her .for-her-list ul{
+    list-style:none;
+}
+
+#him-her .for-her-list ul li{
+    font-size:25px;
+    color:#636466;
+    padding:5px;
+    border-bottom:1px solid #e5e5e5;
+}
+
+#him-her .for-him-list{
+    width:300px;
+    margin-left:50px;
+    display:block;
+}
+
+#him-her .for-him-list ul{
+    list-style:none;
+}
+
+#him-her .for-him-list ul li{
+    font-size:25px;
+    color:#636466;
+    padding:5px;
+    border-bottom:1px solid #e5e5e5;
+}
+
+
+#build-cake{
+    margin-bottom:90px;
+}
+
+#explore-more{
+    margin-bottom:60px;
+}
+
+#explore-more .explore-image-div{
+    padding:20px;
+    
+}
+
+
+
+
+
+/*End of My CSS*/
+
+
+/* 
+
+
 .p3{
    margin-left:1%;
    width: 20%;
@@ -64,8 +160,8 @@ img.low{
 .mostsell{
     width: 100%;
     border: 1px solid rgb(165, 112, 42);
-    /* height:400px; */
-    /* margin: auto; */
+    height:400px; */
+    /* margin: auto;
     }
 .mostsell .single img {
     width: 49.5%;
@@ -298,4 +394,4 @@ img.p2{
                 width: 80%!important;
             }
             
-            }
+            } */

@@ -18,7 +18,7 @@ import { CakesData } from 'src/app/CAKES_CAT_AND_SUBCAT/OUR_CAKES/ourcakes.model
       //   const params1 = new HttpParams();
       //   params1.set('category', 'ourcakes');
       //   params1.set('subcategory', 'baby_shower');
-        const x = { category: 'featured_cakes' , subcategory: 'unicorn' };
+        const x = { category: 'ourcakes' , subcategory: 'fresh_cream' };
 
         // const category = 'ourcakes'
         this.http.get('http://localhost:3000/cakes/getcakebycategory' , { params: x }).subscribe((res: CakesData[]) => {

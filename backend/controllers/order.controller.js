@@ -11,6 +11,7 @@ var formidable = require('formidable');
 //var upload_path = "./Images/PlaceOrder/";
 const multiparty = require('multiparty');
 //const { createInvoice } = require('./invoice.controller');
+mongoose.set('useFindAndModify', false);
 
 // routes
 router.get("/getall", function (req, res) {
@@ -138,7 +139,7 @@ router.post('/update/:id', app.post("/update/:id", (req, res) => {
 
 
 
-/*router.post('/delete/:id', app.post("/delete/:id", (req, res) => {
+router.post('/delete/:id', app.post("/delete/:id", (req, res) => {
     const id = req.params.id;
     console.log(id);
     PlaceOrderModel.findOneAndRemove({ _id: id }, function (err) {
@@ -151,4 +152,4 @@ router.post('/update/:id', app.post("/update/:id", (req, res) => {
         }
     }
     )
-})))*/
+}))

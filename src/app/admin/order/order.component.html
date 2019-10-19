@@ -1,6 +1,6 @@
-<!-- <mat-card class="outer">
+<mat-card class="outer">
     <mat-card-title>
-        LIST OF OFFERS
+        LIST OF ORDERS
     </mat-card-title>
     <mat-card-content>
             <ul>
@@ -12,16 +12,26 @@
                        Cake's Name: {{d.name}} <br> <br>
                        Cake's Size: {{d.size}} <br> <br>
                        Sponge Type: {{d.spongetype}} <br> <br>
-                       {{d.cream}} <br> <br>
-                       <img [src]="linkImg(d.image)" alt="Image" style="width: 500px; height: 250px;"> <br>
+                       Cream: {{d.cream}} <br> <br>
+                       Egg or Eggless: {{d.egg_or_eggless}} <br> <br>
+                       Cake Filler: {{d.cake_filler}} <br> <br>
+                       Message: {{d.message}} <br> <br>
+                       Message Color: {{d.message_color}} <br> <br>
+                       First Name: {{d.first_name}} <br> <br>
+                       Email ID: {{d.email_ID}} <br> <br>
+                       Mobile Number:{{d.mobile_number}} <br> <br>
+                       Category: {{d.category}} <br> <br>
+                       SubCategory: {{d.subcategory}} <br> <br>
+                       Price: {{d.price}} <br> <br>
+                       <!-- <img [src]="linkImg(d.image)" alt="Image" style="width: 500px; height: 250px;"> <br> -->
                     <br> <br>
-                    {{d.createdDate}} <br> <br>
-                    <button mat-raised-button class="up" (click)="updateoffer(d.id);"> <a [routerLink]="['/editoffer', d.id]" routerLinkActive="router-link-active"></a> Update </button>
-                    <button mat-raised-button class="del" (click)="deleteoffer(d.id);">Delete</button>
+                    Order Placed Date:{{d.createdDate}} <br> <br>
+                    <!-- <button mat-raised-button class="up" (click)="updateoffer(d.id);"> <a [routerLink]="['/editoffer', d.id]" routerLinkActive="router-link-active"></a> Update </button> -->
+                    <button mat-raised-button class="del" (click)="deleteorder(d.id);">Delete</button>
                 </mat-card-content>
                  </mat-card>
                 </li>
             </ul>
     </mat-card-content>
-    <button mat-raised-button class="back"><a routerLink="/admin/offerspage">Back</a> </button>
-</mat-card> -->
+    <button mat-raised-button class="back"><a routerLink="/admin">Back</a> </button>
+</mat-card>
