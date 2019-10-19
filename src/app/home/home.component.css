@@ -44,6 +44,39 @@ h2,h3{
     margin-bottom:90px;
 }
 
+#wedding-and-anniversary .wedding-list p, #wedding-and-anniversary .anniversary-list p{
+    color:#dc3a43;
+    font-size:25px;
+    font-family:'Muli';
+}
+
+#wedding-and-anniversary .wedding-list ul, #wedding-and-anniversary .anniversary-list ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+#wedding-and-anniversary .wedding-list ul li a, #wedding-and-anniversary .anniversary-list ul li a {
+    text-decoration:none;
+    color:#222;
+}
+
+#wedding-and-anniversary .wedding-list ul li a:hover{
+    text-decoration:underline;
+}
+
+#wedding-and-anniversary .anniversary-list ul li a:hover{
+    text-decoration:underline;
+}
+
+#wedding-and-anniversary .wedding-list ul li, #wedding-and-anniversary .anniversary-list ul li{
+    list-style: none;
+    margin:0;
+    font-family: 'Muli';
+    font-size:20px;
+    padding:8px;
+}
+
 #gift-cake{
     margin-bottom:80px;
 }

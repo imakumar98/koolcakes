@@ -2,7 +2,7 @@ import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { PageNotFoundComponent} from './pages/404.component';
+// import { PageNotFoundComponent} from './pages/404.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { NewsComponent } from './news/news.component';
@@ -101,7 +101,7 @@ const routes: Routes = [
   {path: 'header', component: HeaderComponent},
   // {path: 'cakeform', component: CakeformComponent},
   {path: 'cakeform/:category/:subcategory/:name/:price', component: CakeformComponent},
-  {path: 'page-not-found',component: PageNotFoundComponent},
+  // {path: 'page-not-found',component: PageNotFoundComponent},
 
   {path: 'admin', component: AdminComponent},
   {path: 'admin/cakecatreg', component: CakescategoryregComponent},
