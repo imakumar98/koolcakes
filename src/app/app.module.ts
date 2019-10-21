@@ -119,6 +119,7 @@ import { AllConsolescakesComponent } from './CAKES_CAT_AND_SUBCAT/SPORTS_AND_GAM
 import { CarcakesComponent } from './CAKES_CAT_AND_SUBCAT/SPORTS_AND_GAMES/car_cakes/car_cakes.component';
 import { CartService } from './cakeform/cakeform.service';
 import { AllOrdersComponent } from './admin/order/order.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -258,7 +259,8 @@ import { AllOrdersComponent } from './admin/order/order.component';
 
     CakescategoryregComponent,
     CakesregComponent,
-     CartComponent
+     CartComponent,
+     ProductComponent
   ],
   imports: [
     BrowserModule,
