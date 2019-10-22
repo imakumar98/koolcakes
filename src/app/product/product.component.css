@@ -1,0 +1,31 @@
+#product-page-container{
+    padding-top:30px;
+    padding-bottom:30px;
+}
+
+#product-page-container .product-image-div{
+    border:1px solid #e5e5e5;
+    padding:10px;
+    border-radius:3px;
+}
+
+.btn-primary{
+    background:#dc3a43;
+    border:none;
+}
+
+.list{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.list .value{
+    float:right;
+    margin-top:-20px;
+    font-weight:bold;
+}
+
+.shape-size-type p, .decoration p{
+    color:#dc3a43;
+}

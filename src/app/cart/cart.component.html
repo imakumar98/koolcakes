@@ -1,68 +1,88 @@
-<!-- <h3>Your Cart</h3>
-{{products}} <br>
-{{quantity}} -->
-<div class="cart">
-<h3>Your Cart</h3>
-<mat-card class="example-card col-6" *ngFor= "let x of cartValue; index as j" >
-       
-    <mat-card-header>
-      
-      <mat-card-title>Order Details
-            <br>
-            NAME: {{temp.name}} <br>
-            PRICE: {{temp.price}} <br>
-            CATEGORY: {{temp.category}} <br>
-            SUBCATEGORY: {{temp.subcategory}} <br>
-        QUANTITY: {{quantity}}
-      </mat-card-title>
-     
-    </mat-card-header>
-   
-    <mat-card-content>
-      <div  *ngFor= "let y of x | keyvalue: keepOrder ; index as i " >
-        <div class= "row">
-            <div class="col-3">
-     {{y.key}}</div> <div class="col-3">{{y.value}}</div>
+<div class="container" id="cart-page-container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Cart</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="cart-row">
+          <div class="cart-item">
+            <table class="table table-responsive">
+              <thead>
+                <th>Item</th>
+                <th>Shape, Size & Type</th>
+                <th>Decoration</th>
+                <th>Quantity</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="row">
+                      
+                          <img width="130" height="100" src="https://www.cakerstreet.com/upload/Product_images/resized_800_800/unicorn-birthday-cake-with-handmade-roses-6571.PNG" class="img-fluid">
+                      
+                      
+                          <p>Unicorn Birthday Cake with Handmade Roses (CS-6571)</p>
+                      
+                    </div>
+                    
+                  </td>
+                  <td>
+                      <ul class="shape-list list">
+                          <li>Shape</li>
+                          <li>Round</li>
+                      </ul>
+                      <ul class="type-list list">
+                          <li>Type</li>
+                          <li>Icing</li>
+                      </ul>
+                      <ul class="size-list list">
+                          <li>Size</li>
+                          <li>Medium (8 x 8)</li>
+                      </ul>
+                  </td>
+                  <td>
+                      <ul class="special-requirements list">
+                          <li>Special dietery requirements</li>
+                          <li>Eggless</li>
+                      </ul>
+                      <ul class="sponge-type list">
+                          <li>Select sponge type</li>
+                          <li>Chocolate sponge</li>
+                      </ul>
+                      <ul class="filling list">
+                          <li>Select your filling</li>
+                          <li>Medium (8 x 8)</li>
+                      </ul>
+                      <ul class="message list">
+                          <li>Would you like to add message onto the cake </li>
+                          <li>Medium (8 x 8)</li>
+                      </ul>
+                  </td>
+                  <td>1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="delivery-details-div">
+            <h5>Delivery Details</h5>
+            <div class="row text-center">
+              <form>
+                <div class="form-group">
+                  <label>Postcode:</label>
+                  <input type="text" class="form-control"/>
+                  <br/>
+                  <input type="submit" class="btn btn-secondary" value="Check If Deliverable"/>
+                </div>
+              </form>
+            </div>
+            <div class="action-buttons pull-right">
+              <button class="btn btn-danger">Remove Cart</button>
+              <button class="btn btn-success" style="margin-left:10px">Proceed to Checkout</button>
+            </div>
+          </div>
+        </div>
+        
     </div>
 </div>
-         <mat-card-actions>
-                    <button mat-button (click)="addItem(x)">ADD CAKE</button>
-                    <button mat-button (click)="removeItem(x)">REMOVE CAKE</button>
-                    <button mat-button routerLink="/home" (click)="placeOrder(x)">Place Order</button>
-                  </mat-card-actions>
-    </mat-card-content>
-   
-      
-  </mat-card>
-</div>
-<!-- <div class="tbl">
-<table border="1">
-    <tr>
-        <th>Option</th>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Photo</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Sub Total</th>
-    </tr>
-    <tr *ngFor="let item of products">
-        <td align="center">
-            <a (click)="remove(item.id)">X</a>
-        </td>
-        <td>{{item.id}}</td>
-        <td>{{item.name}}</td>
-        <td>
-            <img src="assets/{{item.product.photo}}" width="50" alt="SELECTED CAKE IMAGE">
-        </td>
-        <td>{{item.price}}</td>
-        <td>{{quantity}}</td>
-        <td>{{item.price * quantity}}</td>
-    </tr>
-    <tr>
-        <td colspan="6" align="right">Total</td>
-        <td>{{total}}</td>
-    </tr>
-</table>
-</div> -->
-

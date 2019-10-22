@@ -88,6 +88,11 @@ import { HeaderComponent } from './header/header.component';
 import { AllOrdersComponent } from './admin/order/order.component';
 
 
+//New Components
+import {ProductComponent} from './product/product.component';
+
+
+
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'about', component: AboutComponent},
@@ -186,6 +191,10 @@ const routes: Routes = [
   {path: 'specialcakes/wedding', component: WeddingComponent},
 
   {path: 'cart', component:  CartComponent},
+
+
+  //New routes
+  {path: 'product',component: ProductComponent},
 
 
 ];
