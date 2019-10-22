@@ -120,6 +120,7 @@ import { CarcakesComponent } from './CAKES_CAT_AND_SUBCAT/SPORTS_AND_GAMES/car_c
 import { CartService } from './cakeform/cakeform.service';
 import { AllOrdersComponent } from './admin/order/order.component';
 import { ProductComponent } from './product/product.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -260,7 +261,8 @@ import { ProductComponent } from './product/product.component';
     CakescategoryregComponent,
     CakesregComponent,
      CartComponent,
-     ProductComponent
+     ProductComponent,
+     CategoriesComponent
   ],
   imports: [
     BrowserModule,

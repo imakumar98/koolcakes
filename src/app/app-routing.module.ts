@@ -90,6 +90,7 @@ import { AllOrdersComponent } from './admin/order/order.component';
 
 //New Components
 import {ProductComponent} from './product/product.component';
+import {CategoriesComponent} from './categories/categories.component';
 
 
 
@@ -195,6 +196,7 @@ const routes: Routes = [
 
   //New routes
   {path: 'product',component: ProductComponent},
+  {path:'categories', component: CategoriesComponent}
 
 
 ];
